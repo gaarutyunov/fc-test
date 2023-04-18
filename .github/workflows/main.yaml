@@ -17,13 +17,13 @@ jobs:
         uses: abatilo/actions-poetry@v2
         with:
           poetry-version: 1.3.2
-      - name: chdir
-        run: cd coding
       - name: Install
+        working-directory: coding
         run: poetry install
       - name: Test
+        working-directory: coding
         run: poe test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
-          file: coverage.lcov
+          file: coding/coverage.lcov
