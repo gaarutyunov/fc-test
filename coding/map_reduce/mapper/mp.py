@@ -23,4 +23,4 @@ class MultiprocessingMapper(Mapper, Generic[T, T_r]):
     def _map_func(self, item: T) -> T_r:  # pragma: no cover
         for func in self.maps:
             item = func(item)
-        return item
+        return item  # type: ignore

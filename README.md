@@ -21,17 +21,27 @@ The project is structured as follows:
 1. [Python 3.9](https://www.python.org/downloads/)
 2. [Poetry](https://python-poetry.org/docs/#installation)
 
-## Steps to run the code
+**Note**
+Poetry is used for virtual environment management.
+Only perftest 
 
-1. Install the dependencies with
+## Steps to test the code
+
+1. Install the dependencies with (If you are using poetry)
 
 ```shell
 cd coding && poetry install
 ```
 
 2. Put data into the `coding/tests/data` folder
-3. Run tests with
+3. Run tests with (If you are using poetry)
 
 ```shell
 cd coding && poe test
+```
+
+4. Or with:
+
+```shell
+cd coding && pytest
 ```

@@ -17,7 +17,7 @@ class Reducer(Generic[T, T_r]):
         for reduce in self.reduces:
             inputs = reduce(inputs)
 
-        return inputs
+        return inputs  # type: ignore
 
     def __call__(self, inputs: Iterable[T]) -> T_r:
         return self.reduce(inputs)

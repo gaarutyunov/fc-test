@@ -1,6 +1,6 @@
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import Any, Dict, Iterable, List, TypeVar, Generic
+from typing import Any, Dict, Generic, Iterable, List, TypeVar
 
 from .base import Reduce
 

@@ -18,5 +18,5 @@ class Map(abc.ABC, Generic[T, T_r]):
 
     def __call__(self, inp: T) -> T_r:
         if not self.check(inp):
-            return inp
+            return inp  # type: ignore
         return self.map(inp)

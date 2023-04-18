@@ -20,6 +20,9 @@ jobs:
       - name: Install
         working-directory: coding
         run: poetry install
+      - name: Lint
+        working-directory: coding
+        run: $(poetry env info -p)/bin/poe lint
       - name: Test
         working-directory: coding
         run: $(poetry env info -p)/bin/poe test

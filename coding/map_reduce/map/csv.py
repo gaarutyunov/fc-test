@@ -1,5 +1,5 @@
 import os
-from typing import Iterable, Union
+from typing import Iterable, List, Union
 
 from map_reduce.io import CSVReader
 from .dict import ColumnMap, ConcatMap, Map, MultiColumnMap
@@ -10,7 +10,7 @@ def maps_from_csv(
 ) -> Iterable[Map]:
     reader = CSVReader(path, delimiter=delimiter)
 
-    maps = []
+    maps: List[Map] = []
 
     for line in reader.read():
         if "*" in line["source"]:

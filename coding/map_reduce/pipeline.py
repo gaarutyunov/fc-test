@@ -13,7 +13,7 @@ __all__ = ["Pipeline"]
 
 class Pipeline(Generic[T, T_r, T_o]):
     def __init__(
-        self, inputs: Reader[T], mapper: Mapper[T, T_r], reducer: Reducer[T_r, T_o]
+        self, inputs: Reader, mapper: Mapper[T, T_r], reducer: Reducer[T_r, T_o]
     ):
         self.inputs = inputs
         self.mapper = mapper

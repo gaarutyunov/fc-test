@@ -1,4 +1,4 @@
-from typing import Iterable, TypeVar, Generic
+from typing import Generic, Iterable, TypeVar
 
 from map_reduce.mapper import Mapper
 
@@ -15,4 +15,4 @@ class SequentialMapper(Generic[T, T_r], Mapper[T, T_r]):
     def _map_func(self, item: T) -> T_r:
         for func in self.maps:
             item = func(item)
-        return item
+        return item  # type: ignore
