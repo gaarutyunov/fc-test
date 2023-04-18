@@ -23,7 +23,7 @@ The project is structured as follows:
 
 **Note**
 Poetry is used for virtual environment management.
-Only perftest 
+It is not required to run the code, but it is recommended.
 
 ## Steps to test the code
 
