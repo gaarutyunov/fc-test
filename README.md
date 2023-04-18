@@ -21,7 +21,8 @@ The project is structured as follows:
 1. [Python 3.9](https://www.python.org/downloads/)
 2. [Poetry](https://python-poetry.org/docs/#installation)
 
-> **Note** Poetry is used for virtual environment management.
+> **Note** 
+> Poetry is used for virtual environment management.
 It is not required to run the code, but it is recommended for development.
 
 ## Steps to test the code
