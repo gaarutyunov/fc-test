@@ -1,5 +1,7 @@
 # fc-test
 
+[![codecov](https://codecov.io/gh/gaarutyunov/fc-test/branch/main/graph/badge.svg?token=23W0N4BUAP)](https://codecov.io/gh/gaarutyunov/fc-test)
+
 Fashion Cloud Test Project
 
 ## Task
