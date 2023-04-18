@@ -4,11 +4,10 @@ import os
 import sys
 from typing import TextIO, Union
 
-from coding.map_reduce.mapper import Mapper
-
 from map_reduce.io import CSVReader
 from map_reduce.map import maps_from_csv
-from map_reduce.mapper import MultiprocessingMapper, SequentialMapper
+
+from map_reduce.mapper import Mapper, MultiprocessingMapper, SequentialMapper
 from map_reduce.pipeline import Pipeline
 from map_reduce.reduce import GroupByReduce
 from map_reduce.reducer import Reducer
