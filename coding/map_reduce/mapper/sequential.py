@@ -9,6 +9,8 @@ T_r = TypeVar("T_r")
 
 
 class SequentialMapper(Generic[T, T_r], Mapper[T, T_r]):
+    """Map inputs sequentially using map()"""
+
     def map(self, inputs: Iterable[T]) -> Iterable[T_r]:
         return map(self._map_func, inputs)
 

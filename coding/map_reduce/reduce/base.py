@@ -8,6 +8,8 @@ T_r = TypeVar("T_r")
 
 
 class Reduce(abc.ABC, Generic[T, T_r]):
+    """Base class for all reduce operations."""
+
     @abc.abstractmethod
     def reduce(self, inputs: Iterable[T]) -> T_r:
         """Reduce an iterable of inputs to a single output."""

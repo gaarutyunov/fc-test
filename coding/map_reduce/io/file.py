@@ -6,6 +6,8 @@ from .base import Reader
 
 
 class FileReader(Reader):
+    """Reads a file line by line."""
+
     def __init__(self, path: Union[str, os.PathLike]):
         super().__init__()
         self.path = pathlib.Path(path).expanduser()

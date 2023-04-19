@@ -8,6 +8,8 @@ T_r = TypeVar("T_r")
 
 
 class Map(abc.ABC, Generic[T, T_r]):
+    """Base class for all map operations."""
+
     @abc.abstractmethod
     def map(self, inp: T) -> T_r:
         """Map an input to an output."""

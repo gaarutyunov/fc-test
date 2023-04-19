@@ -6,6 +6,8 @@ from .models import Article, Catalog
 
 
 class CatalogReduce(Reduce[Grouping[Grouping[Dict[str, str]]], List[Catalog]]):
+    """Reduces grouped objects to a list of Catalogs."""
+
     def reduce(
         self, inputs: Iterable[Grouping[Grouping[Dict[str, str]]]]
     ) -> List[Catalog]:

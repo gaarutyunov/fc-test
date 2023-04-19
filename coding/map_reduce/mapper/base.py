@@ -12,6 +12,8 @@ T_r = TypeVar("T_r")
 
 
 class Mapper(abc.ABC, Generic[T, T_r]):
+    """Base class for all mappers."""
+
     def __init__(self, maps: Iterable[Map[Any, Any]]):
         self.maps = maps
 

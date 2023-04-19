@@ -12,11 +12,15 @@ T = TypeVar("T")
 
 @dataclass
 class Grouping(Generic[T]):
+    """A grouping of values by a key."""
+
     key: str
     values: Iterable[Any]
 
 
 class GroupByReduce(Reduce[Any, Iterable[Grouping[Any]]]):
+    """Groups values by a key."""
+
     def __init__(self, key: str) -> None:
         self.key = key
 

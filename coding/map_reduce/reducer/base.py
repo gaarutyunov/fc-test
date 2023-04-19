@@ -9,6 +9,8 @@ T_r = TypeVar("T_r")
 
 
 class Reducer(Generic[T, T_r]):
+    """Reduce inputs sequentially using configured reduce operations"""
+
     def __init__(self, reduces: Iterable[Reduce]) -> None:
         self.reduces = reduces
 

@@ -8,6 +8,7 @@ from .dict import ColumnMap, ConcatMap, Map, MultiColumnMap
 def maps_from_csv(
     path: Union[str, os.PathLike], delimiter: str = ";", multi_delimiter: str = "|"
 ) -> Iterable[Map]:
+    """Reads a CSV file with mapping configuration and returns a list of map operations."""
     reader = CSVReader(path, delimiter=delimiter)
 
     maps: List[Map] = []
@@ -25,7 +26,7 @@ def maps_from_csv(
             )
         elif "|" in line["source"]:
             maps.append(
-                MultiColumnMap(
+                MultiColumnMap[str](
                     line["source_type"],
                     line["destination_type"],
                     line["source"],
@@ -35,7 +36,7 @@ def maps_from_csv(
             )
         else:
             maps.append(
-                ColumnMap(
+                ColumnMap[str, str](
                     line["source_type"],
                     line["destination_type"],
                     line["source"],

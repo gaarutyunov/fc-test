@@ -12,6 +12,8 @@ __all__ = ["Pipeline"]
 
 
 class Pipeline(Generic[T, T_r, T_o]):
+    """Run a pipeline of map and reduce operations"""
+
     def __init__(
         self, inputs: Reader, mapper: Mapper[T, T_r], reducer: Reducer[T_r, T_o]
     ):
