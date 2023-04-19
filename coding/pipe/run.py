@@ -20,7 +20,12 @@ class Encoder(json.JSONEncoder):
 
     def default(self, o):
         if dataclasses.is_dataclass(o):
-            return dataclasses.asdict(o)
+            return dataclasses.asdict(
+                o,
+                dict_factory=lambda x: {
+                    k: v for (k, v) in x if v is not None and len(v) > 0
+                },
+            )
         return super().default(o)  # pragma: no cover
 
 
@@ -48,4 +53,4 @@ def run(
 
     res = pipeline.run()
 
-    json.dump(res, output, indent=2, cls=Encoder)
+    json.dump(res, output, indent=2, cls=Encoder, allow_nan=False, sort_keys=True)
