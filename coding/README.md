@@ -8,7 +8,13 @@
 
 | source | destination                     | source_type             | destination_type |
 |--------|---------------------------------|-------------------------|-----------------|
-| *      | a space here to " ".join(values) | price_buy_net\|currency |price_buy_net_currency             |
+| *      | a space here to " ".join(values) | price_buy_net\|currency |price_buy_net_currency             |`
+
+* Some other ideas to optimize pipeline execution:
+  * `AsyncPipeline` that leverages `asyncio` capabilities
+  * `ReactivePipeline` that uses `RxPy` or similar reactive frameworks
+  * `StreamingPipeline` that uses `asyncio-streams` to process data in a streaming fashion
+  * `KubernetesPipeline` that launches pods in Kubernetes to process data
 
 
 ## Structure
